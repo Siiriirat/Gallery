@@ -11,11 +11,13 @@
 
 - git clone https://github.com/Siiriirat/Gallery.git
 - cd Gallery
-- Create a database and inform ".env"
+- Create a database and Create file ".env" in Gallery Folder
   <p>DB_DATABASE=gallery_db</p>
   <p>DB_USERNAME=root</p>
   <p>DB_PASSWORD=""</p>
 - Open command in Gallery
+  <p>composer update</p>
+  <p>php artisan key:generate</p>
   <p>php artisan migrate</p>
   <p>php artisan db:seed</p>
   <p>php artisan serve</p>

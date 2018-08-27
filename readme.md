@@ -12,7 +12,8 @@
 - git clone https://github.com/Siiriirat/Gallery.git
 - cd Gallery
 - Create a database and inform ".env"
-  ->>DB_DATABASE=gallery_db
+  <p>DB_DATABASE=gallery_db</p>
+
   ->>DB_USERNAME=root
   ->>DB_PASSWORD=""
 - Open command

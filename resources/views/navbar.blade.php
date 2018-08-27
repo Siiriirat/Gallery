@@ -3,7 +3,6 @@
 <head>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
   <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css">
-
   <title>Gallery</title>
   <style type="text/css">
     .nav-example{
@@ -36,7 +35,7 @@
     </div>
   </nav>
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark nav-example">
-  	<a class="navbar-brand" href="{{ url('Homepage') }}"> <img class="logo" src="http://bootstrap-ecommerce.com/main/images/logo-white.png" height="40"> Car Gallery</a>
+  	<a class="navbar-brand" href="{{ url('Homepage') }}"> <img class="logo" src="http://icons.iconarchive.com/icons/calebamesbury/classic-american-cars/1024/Muscle-Car-Pontiac-GTO-icon.png" height="40"> Car Gallery</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar2" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>

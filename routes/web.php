@@ -22,6 +22,8 @@ Route::get('/Homepage', 'Gallery\GalleryController@index');
 Route::get('/AddPhoto', 'Gallery\GalleryController@getaddPhoto');
 Route::post('/AddPhoto', 'Gallery\GalleryController@addPhoto');
 
+Route::get('/HidePhoto', 'Gallery\GalleryController@hidePhoto');
+
 Route::get('/getSubcategory', function(){
   $cat_id = Input::get('cat_id');
   $subcategories = Subcategory::where('category_id',$cat_id)->get();

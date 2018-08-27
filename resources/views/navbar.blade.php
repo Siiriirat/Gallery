@@ -31,14 +31,7 @@
   <a class="nav-link" href="{{ url('Homepage') }}">Home <span class="sr-only">(current)</span></a>
   </li>
   <li class="nav-item"><a class="nav-link" href="{{ url('AddPhoto') }}"> AddPhoto </a></li>
-  <li class="nav-item dropdown">
-  	<a class="nav-link  dropdown-toggle" href="#" data-toggle="dropdown">  Dropdown  </a>
-      <ul class="dropdown-menu">
-  	  <li><a class="dropdown-item" href="#"> Menu item 1</a></li>
-  	  <li><a class="dropdown-item" href="#"> Menu item 2 </a></li>
-      </ul>
-  </li>
-  <li class="nav-item"><a class="nav-link" href="html-components.html"> AddItem </a></li>
+  <li class="nav-item"><a class="nav-link" href="{{ url('HidePhoto') }}"> HidePhoto </a></li>
       </ul>
     </div>
   </nav>
@@ -53,14 +46,8 @@
   <a class="nav-link" href="{{ url('Homepage') }}">Home <span class="sr-only">(current)</span></a>
   </li>
   <li class="nav-item"><a class="nav-link" href="{{ url('AddPhoto') }}"> AddPhoto </a></li>
-  <li class="nav-item dropdown">
-  	<a class="nav-link  dropdown-toggle" href="#" data-toggle="dropdown">  Dropdown  </a>
-      <ul class="dropdown-menu">
-  	  <li><a class="dropdown-item" href="#"> Menu item 1</a></li>
-  	  <li><a class="dropdown-item" href="#"> Menu item 2 </a></li>
-      </ul>
-  </li>
-  <li class="nav-item"><a class="nav-link" href="html-components.html"> Documentation </a></li>
+  <li class="nav-item"><a class="nav-link" href="{{ url('HidePhoto') }}"> HidePhoto </a></li>
+
       </ul>
     </div>
   </nav>

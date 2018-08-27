@@ -49,6 +49,77 @@ class PhotoTableSeeder extends Seeder
           'updated_at' => date('Y-m-d H:i:s')
           ],
           [
+          'photo_name' => 'Vantage N430(5)',
+          'category_id' => '1',
+          'subcategory_id' => '1',
+          'status' => 'show',
+          'photo' => '1.jpg',
+          'created_at' => date('Y-m-d H:i:s'),
+          'updated_at' => date('Y-m-d H:i:s')
+          ],
+          [
+          'photo_name' => 'Vantage N430(6)',
+          'category_id' => '1',
+          'subcategory_id' => '1',
+          'status' => 'show',
+          'photo' => '2.jpg',
+          'created_at' => date('Y-m-d H:i:s'),
+          'updated_at' => date('Y-m-d H:i:s')
+          ],
+          [
+          'photo_name' => 'Vantage N430(7)',
+          'category_id' => '1',
+          'subcategory_id' => '1',
+          'status' => 'show',
+          'photo' => '3.jpg',
+          'created_at' => date('Y-m-d H:i:s'),
+          'updated_at' => date('Y-m-d H:i:s')
+          ],
+          [
+          'photo_name' => 'Vantage N430(8)',
+          'category_id' => '1',
+          'subcategory_id' => '1',
+          'status' => 'show',
+          'photo' => '4.jpg',
+          'created_at' => date('Y-m-d H:i:s'),
+          'updated_at' => date('Y-m-d H:i:s')
+          ],[
+          'photo_name' => 'Vantage N430(9)',
+          'category_id' => '1',
+          'subcategory_id' => '1',
+          'status' => 'show',
+          'photo' => '1.jpg',
+          'created_at' => date('Y-m-d H:i:s'),
+          'updated_at' => date('Y-m-d H:i:s')
+          ],
+          [
+          'photo_name' => 'Vantage N430(10)',
+          'category_id' => '1',
+          'subcategory_id' => '1',
+          'status' => 'show',
+          'photo' => '2.jpg',
+          'created_at' => date('Y-m-d H:i:s'),
+          'updated_at' => date('Y-m-d H:i:s')
+          ],
+          [
+          'photo_name' => 'Vantage N430(11)',
+          'category_id' => '1',
+          'subcategory_id' => '1',
+          'status' => 'show',
+          'photo' => '3.jpg',
+          'created_at' => date('Y-m-d H:i:s'),
+          'updated_at' => date('Y-m-d H:i:s')
+          ],
+          [
+          'photo_name' => 'Vantage N430(12)',
+          'category_id' => '1',
+          'subcategory_id' => '1',
+          'status' => 'hide',
+          'photo' => '4.jpg',
+          'created_at' => date('Y-m-d H:i:s'),
+          'updated_at' => date('Y-m-d H:i:s')
+          ],
+          [
           'photo_name' => 'Roadster(1)',
           'category_id' => '1',
           'subcategory_id' => '2',

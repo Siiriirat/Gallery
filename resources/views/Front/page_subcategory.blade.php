@@ -45,13 +45,13 @@
 <div class="container">
   <nav class="breadcrumb">
   <a class="breadcrumb-item" href="{{URL('Homepage')}}">Home</a>
-  <span class="breadcrumb-item active">Bootstrap</span>
+  <span class="breadcrumb-item active">{{$category_name}}</span>
   </nav>
     <div class="row">
       @foreach($subcategories as $subcategory)
         <div class="col-md-4 ">
             <div class="our-team">
-                <img src="https://www.w3schools.com/w3css/img_lights.jpg">
+                <img src="{{ URL('uploads/subcategory/'.$subcategory->subcategory_photo)}}">
                 <div class="team-content">
                     <h3 class="title">{{$subcategory->subcategory_name}}</h3>
                     <span class="post"></span>

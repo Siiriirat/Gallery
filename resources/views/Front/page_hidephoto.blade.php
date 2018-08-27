@@ -2,11 +2,6 @@
 @section('content')
 <link rel="stylesheet" type="text/css" href="{{ asset('css/bootstrap-gallery.css')}}">
 <div class="container">
-  <nav class="breadcrumb">
-  <a class="breadcrumb-item" href="{{URL('Homepage')}}">Home</a>
-  <a class="breadcrumb-item" href="{{ URL('Subcategory/'.$category->category_name.'/'.$category->category_id )}}">{{$category->category_name}}</a>
-  <span class="breadcrumb-item active">{{$subcategory_name}}</span>
-  </nav>
   <br>
     <div class="row">
       @foreach($photos as $photo)

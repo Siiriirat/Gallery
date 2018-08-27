@@ -29,6 +29,7 @@ class GalleryController extends Controller
       $page = $request->input('page');
       $page = ($page != null)?$page:1;
       return view('Front.page_subcategory')->with('subcategories',$subcategories)
+                                           ->with('category_name',$category_name)
                                            ->with('NUM_PAGE',$NUM_PAGE)
                                            ->with('page',$page);
   }
@@ -36,12 +37,18 @@ class GalleryController extends Controller
   public function getPhoto($subcategory_name,$subcategory_id,Request $request)    {
       $NUM_PAGE = 9;
       $photos = Photo::where('subcategory_id',$subcategory_id)
+                     ->where('status',"show")
+                     ->orderBy('updated_at','desc')
                      ->paginate($NUM_PAGE);
+      $subcategory = Subcategory::findOrFail($subcategory_id);
+      $category = Category::findOrFail($subcategory->category_id);
       $page = $request->input('page');
       $page = ($page != null)?$page:1;
       return view('Front.page_gallery')->with('photos',$photos)
                                        ->with('NUM_PAGE',$NUM_PAGE)
-                                       ->with('page',$page);
+                                       ->with('page',$page)
+                                       ->with('subcategory_name',$subcategory_name)
+                                       ->with('category',$category);
   }
 
   public function getaddPhoto()    {
@@ -55,6 +62,7 @@ class GalleryController extends Controller
          $photo = request()->all();
          $photo = Photo::create($photo);
          $photo = Photo::all()->last();
+         $subcategory = Subcategory::findOrFail($photo->subcategory_id);
          if($request->hasFile('photo')){
               echo 'Uploaded <br>';
               $file = $request->file('photo');
@@ -69,7 +77,7 @@ class GalleryController extends Controller
          {
               echo 'Can not Upload';
          }
-          return redirect('AddPhoto');
+          return redirect()->action('Gallery\\GalleryController@getPhoto',['subcategory_name'=>$subcategory->subcategory_name,'subcategory_id'=>$subcategory->subcategory_id]);
         }
         else {
          return back()->withErrors($validator)->withInput();
@@ -103,11 +111,16 @@ class GalleryController extends Controller
 
   public function editPhoto($photo_name,$photo_id){
        $photo = Photo::findOrFail($photo_id);
+       $subcategory = Subcategory::findOrFail($photo->subcategory_id);
+       $category = Category::findOrFail($photo->category_id);
        $categories = Category::get();
        $subcategories = Subcategory::get();
        return view('Front.page_editphoto')->with('photo',$photo)
                                           ->with('categories',$categories)
-                                          ->with('subcategories',$subcategories);
+                                          ->with('subcategories',$subcategories)
+                                          ->with('category',$category)
+                                          ->with('subcategory',$subcategory);
+
 
   }
   public function updatePhoto(Request $request){
@@ -124,13 +137,25 @@ class GalleryController extends Controller
               echo '<a href="'.$path.'" target="_blank">Download Photo</a>';
               $created_photo = Photo::findOrFail($photo_id);
               $photo->update($request->all());
+              $subcategory = Subcategory::findOrFail($photo->subcategory_id);
               $created_photo->update([  'photo' => $fileName,  ]);
 
          }
-         return redirect('AddPhoto');
+         return redirect()->action('Gallery\\GalleryController@getPhoto',['subcategory_name'=>$subcategory->subcategory_name,'subcategory_id'=>$subcategory->subcategory_id]);
         }
         else {
          return back()->withErrors($validator)->withInput();
        }
+  }
+  public function hidePhoto(Request $request)    {
+      $NUM_PAGE = 9;
+      $photos = Photo::where('status',"hide")
+                     ->orderBy('updated_at','desc')
+                     ->paginate($NUM_PAGE);
+      $page = $request->input('page');
+      $page = ($page != null)?$page:1;
+      return view('Front.page_hidephoto')->with('photos',$photos)
+                                         ->with('NUM_PAGE',$NUM_PAGE)
+                                         ->with('page',$page);
   }
 }

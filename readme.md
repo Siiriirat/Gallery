@@ -13,10 +13,9 @@
 - cd Gallery
 - Create a database and inform ".env"
   <p>DB_DATABASE=gallery_db</p>
-
-  ->>DB_USERNAME=root
-  ->>DB_PASSWORD=""
-- Open command
-  ->>php artisan migrate
-  ->>php artisan db:seed
-  ->>php artisan serve
+  <p>DB_USERNAME=root</p>
+  <p>DB_PASSWORD=""</p>
+- Open command in Gallery
+  <p>php artisan migrate</p>
+  <p>php artisan db:seed</p>
+  <p>php artisan serve</p>

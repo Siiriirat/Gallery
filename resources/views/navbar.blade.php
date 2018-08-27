@@ -21,7 +21,7 @@
 </head>
 <body>
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark" style="width: 100%;">
-  	<a class="navbar-brand" href="{{ url('Homepage')}}"> <img class="logo" src="http://bootstrap-ecommerce.com/main/images/logo-white.png" height="40"> Gallery</a>
+  	<a class="navbar-brand" href="{{ url('Homepage')}}"> <img class="logo" src="http://icons.iconarchive.com/icons/calebamesbury/classic-american-cars/1024/Muscle-Car-Pontiac-GTO-icon.png" height="40"> Car Gallery</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar1" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -36,7 +36,7 @@
     </div>
   </nav>
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark nav-example">
-  	<a class="navbar-brand" href="{{ url('Homepage') }}"> <img class="logo" src="http://bootstrap-ecommerce.com/main/images/logo-white.png" height="40"> Gallery</a>
+  	<a class="navbar-brand" href="{{ url('Homepage') }}"> <img class="logo" src="http://bootstrap-ecommerce.com/main/images/logo-white.png" height="40"> Car Gallery</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar2" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>

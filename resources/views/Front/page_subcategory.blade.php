@@ -24,17 +24,17 @@
     <div class="carousel-inner" role="listbox">
         <!--First slide-->
         <div class="carousel-item active">
-            <img class="d-block w-100" src="https://mdbootstrap.com/img/Photos/Slides/img%20(130).jpg" alt="First slide">
+            <img class="d-block w-100" src="https://hips.hearstapps.com/amv-prod-cad-assets.s3.amazonaws.com/images/18q1/699328/2018-bmw-m5-vs-cadillac-cts-v-mercedes-amg-e63-s-porsche-panamera-turbo-comparison-test-car-and-driver-photo-705046-s-original.jpg" alt="First slide">
         </div>
         <!--/First slide-->
         <!--Second slide-->
         <div class="carousel-item">
-            <img class="d-block w-100" src="https://mdbootstrap.com/img/Photos/Slides/img%20(129).jpg" alt="Second slide">
+            <img class="d-block w-100" src="https://nutcado96.files.wordpress.com/2014/01/ford-mustang-tuning-sport-cars-luxury-in-the-street-car-pictures-wallpaper-hd.jpg" alt="Second slide">
         </div>
         <!--/Second slide-->
         <!--Third slide-->
         <div class="carousel-item">
-            <img class="d-block w-100" src="https://www.gettyimages.ie/gi-resources/images/Homepage/Hero/UK/CMS_Creative_164657191_Kingfisher.jpg" alt="Third slide">
+            <img class="d-block w-100" src="https://hips.hearstapps.com/amv-prod-cad-assets.s3.amazonaws.com/images/18q1/705046/2018-cadillac-cts-v-photo-705048-s-original.jpg?crop=1xw:1xh;center,center&resize=900:*" alt="Third slide">
         </div>
         <!--/Third slide-->
     </div>

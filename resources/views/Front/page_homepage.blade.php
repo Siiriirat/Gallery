@@ -47,7 +47,7 @@
     @foreach($categories as $category)
       <div class="col-md-4 ">
           <div class="our-team">
-              <img src="https://www.w3schools.com/w3css/img_lights.jpg">
+              <img src="{{ URL('uploads/category/'.$category->category_photo)}}">
               <div class="team-content">
                   <h3 class="title">{{$category->category_name}}</h3>
                   <span class="post"></span>

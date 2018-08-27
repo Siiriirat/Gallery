@@ -8,6 +8,7 @@ use App\Category;
 use App\Subcategory;
 use App\Photo;
 use Validator;
+use DB;
 
 class GalleryController extends Controller
 {
@@ -22,15 +23,25 @@ class GalleryController extends Controller
                                       ->with('page',$page);
   }
 
-  public function getCategory($category_name,$category_id)    {
-      $categories = Category::findOrFail($category_id)->subcategory;
-      return view('Front.page_subcategory')->with('categories',$categories);
+  public function getSubcategory($category_name,$category_id,Request $request)    {
+      $NUM_PAGE = 6;
+      $subcategories = Subcategory::where('category_id',$category_id)->paginate($NUM_PAGE);
+      $page = $request->input('page');
+      $page = ($page != null)?$page:1;
+      return view('Front.page_subcategory')->with('subcategories',$subcategories)
+                                           ->with('NUM_PAGE',$NUM_PAGE)
+                                           ->with('page',$page);
   }
 
-  public function getPhoto($subcategory_name,$subcategory_id)    {
+  public function getPhoto($subcategory_name,$subcategory_id,Request $request)    {
+      $NUM_PAGE = 9;
       $photos = Photo::where('subcategory_id',$subcategory_id)
-                     ->get();
-      return view('Front.page_gallery')->with('photos',$photos);
+                     ->paginate($NUM_PAGE);
+      $page = $request->input('page');
+      $page = ($page != null)?$page:1;
+      return view('Front.page_gallery')->with('photos',$photos)
+                                       ->with('NUM_PAGE',$NUM_PAGE)
+                                       ->with('page',$page);
   }
 
   public function getaddPhoto()    {

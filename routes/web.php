@@ -28,7 +28,7 @@ Route::get('/getSubcategory', function(){
   return Response::json($subcategories);
 });
 
-Route::get('Subcategory/{name}/{id}', 'Gallery\GalleryController@getCategory');
+Route::get('Subcategory/{name}/{id}', 'Gallery\GalleryController@getSubcategory');
 Route::get('Gallery/{name}/{id}', 'Gallery\GalleryController@getPhoto');
 Route::post('Delete/{id}', 'Gallery\GalleryController@deletePhoto');
 Route::get('Edit/{name}/{id}', 'Gallery\GalleryController@editPhoto');

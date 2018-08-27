@@ -18,6 +18,7 @@ class CreateSubcategoriesTable extends Migration
             $table->string('subcategory_name');
             $table->integer('category_id')->unsigned();
             $table->foreign('category_id')->references('category_id')->on('categories');
+            $table->text('subcategory_photo');
             $table->timestamps();
         });
     }

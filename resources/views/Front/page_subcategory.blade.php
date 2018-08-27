@@ -43,25 +43,36 @@
 <!--/.Carousel Wrapper-->
 <br>
 <div class="container">
+  <nav class="breadcrumb">
+  <a class="breadcrumb-item" href="{{URL('Homepage')}}">Home</a>
+  <span class="breadcrumb-item active">Bootstrap</span>
+  </nav>
     <div class="row">
-      @foreach($categories as $category)
+      @foreach($subcategories as $subcategory)
         <div class="col-md-4 ">
             <div class="our-team">
                 <img src="https://www.w3schools.com/w3css/img_lights.jpg">
                 <div class="team-content">
-                    <h3 class="title">{{$category->subcategory_name}}</h3>
+                    <h3 class="title">{{$subcategory->subcategory_name}}</h3>
                     <span class="post"></span>
                 </div>
                 <ul class="social">
 
                 </ul>
-                <a href="{{ URL('Gallery/'.$category->subcategory_name.'/'.$category->subcategory_id )}}">
+                <a href="{{ URL('Gallery/'.$subcategory->subcategory_name.'/'.$subcategory->subcategory_id )}}">
                   <div class="icon fa fa-eye"></div>
                 </a>
             </div>
             <br><br>
         </div>
       @endforeach
+     </div>
+     <div class="row">
+       <div class="col-md-5"></div>
+       <div class="col-md-2">
+         {{ $subcategories->links()}}
+       </div>
+       <div class="col-md-5"></div>
      </div>
 </div>
 <!-- .//container -->

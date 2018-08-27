@@ -8,7 +8,7 @@ use App\Photo;
 
 class Category extends Model
 {
-   protected $fillable = ['category_name'];
+   protected $fillable = ['category_name','category_photo'];
    public function subcategory() {
      return $this->hasMany('App\Subcategory', 'category_id');
    }

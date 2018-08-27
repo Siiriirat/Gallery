@@ -1,8 +1,14 @@
 @extends('navbar')
 @section('content')
 <link rel="stylesheet" type="text/css" href="{{ asset('css/bootstrap-gallery.css')}}">
-<br><br>
+<br>
 <div class="container">
+  <nav class="breadcrumb">
+  <a class="breadcrumb-item" href="{{URL('Homepage')}}">Home</a>
+  <a class="breadcrumb-item" href="{{URL('Homepage')}}">Category</a>
+  <span class="breadcrumb-item active">Bootstrap</span>
+  </nav>
+  <br>
     <div class="row">
       @foreach($photos as $photo)
         <div class="col-md-4 col-sm-6">
@@ -27,6 +33,13 @@
             <br><br>
         </div>
       @endforeach
+    </div>
+    <div class="row">
+      <div class="col-md-5"></div>
+      <div class="col-md-2">
+        {{ $photos->links()}}
+      </div>
+      <div class="col-md-5"></div>
     </div>
 </div>
 

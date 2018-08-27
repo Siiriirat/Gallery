@@ -7,7 +7,7 @@ use App\Category;
 use App\Photo;
 class Subcategory extends Model
 {
-   protected $fillable = ['	subcategory_name','category_id'];
+   protected $fillable = ['	subcategory_name','category_id','subcategory_photo'];
    public function category() {
     return $this->belongsTo(Category::class);
    }

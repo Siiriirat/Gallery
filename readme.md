@@ -21,4 +21,5 @@
   <p>php artisan migrate</p>
   <p>php artisan db:seed</p>
   <p>php artisan serve</p>
-  <p>start the app on http://localhost:8000/Homepage</p>
+
+- Start the app on http://localhost:8000/Homepage</p>

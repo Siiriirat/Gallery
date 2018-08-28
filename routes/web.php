@@ -13,9 +13,7 @@
 use App\Category;
 use App\Subcategory;
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/','Gallery\GalleryController@index');
 
 Route::get('/Homepage', 'Gallery\GalleryController@index');
 
